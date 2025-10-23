@@ -12,7 +12,7 @@ public class SelectionSort {
     }
     static void selectionSort(int[] arr) {
         for(int i = 0; i < arr.length - 2; i++) {
-            int minimum = arr[i];
+            int minimum = i;
             for(int j = i; j < arr.length; j++) {
                 if(arr[j] < arr[minimum]) minimum = j;
             }

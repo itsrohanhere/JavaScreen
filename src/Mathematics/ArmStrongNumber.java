@@ -2,15 +2,16 @@ package Mathematics;
 
 public class ArmStrongNumber {
     public static void main(String[] args) {
-        isArmStrongNumber(12521);
+        isArmStrongNumber(153);
     }
     static void isArmStrongNumber(int number) {
         int num = number;
-        int rev = 0;
+        int arm = 0;
         while(num != 0){
-            rev = rev*10 + num%10;
+            int digit = num%10;
+            arm += digit*digit*digit;
             num /= 10;
         }
-        System.out.println(number == rev);
+        System.out.println(number == arm);
     }
 }

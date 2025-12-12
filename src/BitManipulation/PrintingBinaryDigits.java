@@ -1,18 +1,26 @@
 package BitManipulation;
 
 public class PrintingBinaryDigits {
-    public static void main(String[] args) {
-        int a = 35;
+    static void clearLSB(int num,int bit){
+        int n = num & (~((1<<bit+1)-1));
+        printBits(n);
+    }
+    static void printBits(int num){
         int digit = 8;
-        int count = 0;
+
         while(digit >= 0){
-            System.out.print(1&(a >> digit));
+            System.out.print(1&(num >> digit));
             digit -= 1;
-            count++;
+
 
 
         }
         System.out.println("");
-        System.out.println(count);
+    }
+    public static void main(String[] args) {
+        printBits(47);
+        clearLSB(47,4);
+
+
     }
 }

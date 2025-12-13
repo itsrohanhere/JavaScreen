@@ -27,7 +27,7 @@ public class PrintingBinaryDigits {
     }
     public static void main(String[] args) {
         printBits(47);
-        clearMSBexclusive(47,2);
+        clearMSB(47,2);
 
 
     }
